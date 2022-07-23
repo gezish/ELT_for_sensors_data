@@ -1,10 +1,12 @@
-mysql:
+postgres_new:
   target: dev
   outputs:
     dev:
-      type: mysql
-      server: mysqldb
-      port: 3306
-      schema: analytics
-      username: root
-      password: root
+      type: postgres
+      host: localhost
+      user: airflow
+      pass: airflow
+      port: 5432
+      dbname: pneuma
+      schema: public
+      threads: 4
